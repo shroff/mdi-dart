@@ -41,5 +41,21 @@ class Mdi {
 ${lines.join("\n")}
 }
 `;
-
 util.write("mdi/lib/mdi.dart", output);
+
+processTemplate('mdi.dart', {
+  'VERSION': util.getVersion()
+});
+
+
+function processTemplate(path, params) {
+  const template = util.read('templates/' + path);
+  const output = template.split('\n').map((line) => {
+    return line.replace(/<%\w+%>/g, (param) => {
+      const name = param.replace(/\W/g, '');
+      return params[name];
+    });
+  }).join('\n');
+
+  util.write('mdi/lib/' + path, output);
+}
