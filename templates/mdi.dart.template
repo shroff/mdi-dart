@@ -1,10 +1,10 @@
-// Material Design Icons v5.9.55
+// Material Design Icons v<%VERSION%>
 
 library mdi;
 
 import 'package:flutter/widgets.dart';
 
-part 'icon_map.dart';
+part 'icon_map.dart.skel';
 
 const _fontFamily = 'Material Design Icons';
 const _packageName = 'mdi';

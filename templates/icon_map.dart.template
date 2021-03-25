@@ -1,0 +1,5 @@
+part of 'mdi.dart.skel';
+
+const Map<String, int> _iconMap = {
+<%ICON_MAP%>
+};
