@@ -1,4 +1,4 @@
-part of 'mdi.dart.skel';
+part of 'mdi.dart';
 
 const Map<String, int> _iconMap = {
 <%ICON_MAP%>

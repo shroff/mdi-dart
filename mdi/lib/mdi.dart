@@ -20,4 +20,13 @@ class MdiIcons {
     final codePoint = _iconMap[name];
     return codePoint == null ? null : _MdiIconData(codePoint);
   }
+
+  static Future<String?> showIconPickerDialog(
+    BuildContext context, {
+    required String title,
+    required Color color,
+  }) {
+    // TODO: implement
+    throw Exception('Not Implemented');
+  }
 }
