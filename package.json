@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@mdi/svg": "^5.0.45",
-    "@mdi/util": "^0.3.0"
+    "@mdi/util": "^0.3.0",
+    "@mdi/font": "^5.9.55"
   }
 }

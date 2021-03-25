@@ -1,7 +1,9 @@
+const fs = require("fs");
 const util = require("@mdi/util");
 
 const meta = util.getMeta();
 
+process.stdout.write("Generating Dart Code... ");
 processTemplate('mdi.dart', {
   'VERSION': util.getVersion(),
 });
@@ -10,6 +12,16 @@ processTemplate('icon_map.dart', {
   'ICON_MAP': meta.map((icon) => {
     return `  '${processName(icon.name)}': 0x${icon.codepoint},`;
   }).join('\n'),
+});
+console.log("OK")
+
+process.stdout.write("Updating Font... ")
+fs.copyFile('node_modules/@mdi/font/fonts/materialdesignicons-webfont.ttf', 'mdi/fonts/materialdesignicons-webfont.ttf', (err) => {
+  if (err) {
+    console.log("Error\n" + err)
+  } else {
+    console.log("OK")
+  }
 });
 
 
