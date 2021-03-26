@@ -2,15 +2,15 @@
   "name": "mdi-dart",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/vyperium/mdi-dart.git",
-  "author": "Sharad Chand <pepsighan@sharadchand.com>",
+  "repository": "https://github.com/shroff/mdi-dart.git",
+  "author": "Abhishek Shroff <ashroff6@gmail.com>",
   "license": "MIT",
   "scripts": {
     "build": "node index.js"
   },
   "dependencies": {
-    "@mdi/svg": "^5.0.45",
     "@mdi/util": "^0.3.0",
+    "@mdi/svg": "^5.9.55",
     "@mdi/font": "^5.9.55"
   }
 }
