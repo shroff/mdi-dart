@@ -10,7 +10,7 @@ processTemplate('mdi.dart', {
 
 processTemplate('icon_map.dart', {
   'ICON_MAP': meta.map((icon) => {
-    return `  '${processName(icon.name)}': 0x${icon.codepoint},`;
+    return `  '${icon.name}': 0x${icon.codepoint},`;
   }).join('\n'),
 });
 console.log("OK")
