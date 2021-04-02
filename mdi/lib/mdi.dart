@@ -2,6 +2,7 @@
 
 library mdi;
 
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 part 'icon_map.dart';
@@ -23,8 +24,8 @@ class MdiIcons {
 
   static Future<String?> showIconPickerDialog(
     BuildContext context, {
-    required String title,
-    required Color color,
+    String title = 'Pick a Color',
+    Color color = Colors.blueGrey,
   }) {
     // TODO: implement
     throw Exception('Not Implemented');
