@@ -14,6 +14,7 @@ processTemplate('lib/icon_map.dart', {
     return `  '${icon.name}': 0x${icon.codepoint},`;
   }).join('\n'),
 });
+processTemplate('lib/icon_picker.dart');
 console.log("OK")
 
 process.stdout.write("Updating Font... ")
