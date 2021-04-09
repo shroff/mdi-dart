@@ -1,4 +1,5 @@
 const fs = require("fs");
+const path = require("path");
 const util = require("@mdi/util");
 
 const meta = util.getMeta();
@@ -16,24 +17,40 @@ processTemplate('lib/icon_map.dart', {
 console.log("OK")
 
 process.stdout.write("Updating Font... ")
-fs.copyFile('node_modules/@mdi/font/fonts/materialdesignicons-webfont.ttf', 'mdi/fonts/materialdesignicons-webfont.ttf', (err) => {
-  if (err) {
-    console.log("Error\n" + err)
-  } else {
-    console.log("OK")
-  }
-});
+fs.copyFileSync('node_modules/@mdi/font/fonts/materialdesignicons-webfont.ttf', 'mdi/fonts/materialdesignicons-webfont.ttf');
+console.log("OK")
 
-function processTemplate(path, params) {
-  const template = util.read('templates/' + path + '.template');
+process.stdout.write("Generating Search Terms... ");
+processTemplate('assets/search_terms.json', {
+  'SEARCH_TERMS': meta.map((icon) => {
+    const terms = new Set();
+    icon.aliases.unshift(icon.name);
+    icon.aliases.forEach(alias => {
+      alias.split(/\W/).forEach(term => {
+        terms.add(`"${term}"`);
+      });
+    })
+    return `"${icon.name}": [${Array.from(terms)}]`;
+  }).join(',\n'),
+});
+console.log("OK")
+
+function processTemplate(filePath, params) {
+  const template = util.read('templates/' + filePath + '.template');
   const output = template.split('\n').map((line) => {
     return line.replace(/<%\w+%>/g, (param) => {
       const name = param.replace(/\W/g, '');
       return params[name];
     });
   }).join('\n');
+  
+  const outputPath = 'mdi/' + filePath;
+  const dirname = path.dirname(outputPath)
+  if (!fs.existsSync(dirname)) {
+    fs.mkdirSync(dirname);
+  }
 
-  util.write('mdi/' + path, output);
+  util.write(outputPath, output);
 }
 
 function processName(name) {

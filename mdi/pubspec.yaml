@@ -15,3 +15,5 @@ flutter:
     - family: Material Design Icons
       fonts:
         - asset: fonts/materialdesignicons-webfont.ttf
+  assets:
+    - assets/search_terms.json
