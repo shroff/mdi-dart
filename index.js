@@ -4,11 +4,11 @@ const util = require("@mdi/util");
 const meta = util.getMeta();
 
 process.stdout.write("Generating Dart Code... ");
-processTemplate('mdi.dart', {
+processTemplate('lib/mdi.dart', {
   'VERSION': util.getVersion(),
 });
 
-processTemplate('icon_map.dart', {
+processTemplate('lib/icon_map.dart', {
   'ICON_MAP': meta.map((icon) => {
     return `  '${icon.name}': 0x${icon.codepoint},`;
   }).join('\n'),
@@ -24,7 +24,6 @@ fs.copyFile('node_modules/@mdi/font/fonts/materialdesignicons-webfont.ttf', 'mdi
   }
 });
 
-
 function processTemplate(path, params) {
   const template = util.read('templates/' + path + '.template');
   const output = template.split('\n').map((line) => {
@@ -34,7 +33,7 @@ function processTemplate(path, params) {
     });
   }).join('\n');
 
-  util.write('mdi/lib/' + path, output);
+  util.write('mdi/' + path, output);
 }
 
 function processName(name) {
