@@ -17,6 +17,13 @@ class _MdiIconData extends IconData {
 }
 
 class MdiIcons {
+  static Map<String, IconData> get iconMap => _iconMap.map(
+        (name, codePoint) => MapEntry(
+          name,
+          _MdiIconData(codePoint),
+        ),
+      );
+
   static IconData? fromString(String name) {
     final codePoint = _iconMap[name];
     return codePoint == null ? null : _MdiIconData(codePoint);
