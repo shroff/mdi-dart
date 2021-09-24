@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Icon(Mdi.bell),
+              Icon(MdiIcons.fromString('bell')),
               Text('Ring'),
             ],
           ),
