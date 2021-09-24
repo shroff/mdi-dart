@@ -2,17 +2,15 @@
 # yarn lockfile v1
 
 
-"@mdi/font@^5.9.55":
-  version "5.9.55"
-  resolved "https://registry.yarnpkg.com/@mdi/font/-/font-5.9.55.tgz#41acd50b88073ded7095fc3029d8712b6e12f38e"
-  integrity sha512-jswRF6q3eq8NWpWiqct6q+6Fg/I7nUhrxYJfiEM8JJpap0wVJLQdbKtyS65GdlK7S7Ytnx3TTi/bmw+tBhkGmg==
+"@mdi/font@^6.1.95":
+  "integrity" "sha512-L3cg9qoUEp5MZHvu6rtuobTtPBmq0ATau5ZrHmsaE6gCRs90T4JBWyzV8WCMEjZoy5+zA+/cvtCUtD/+WVaQ9Q=="
+  "resolved" "https://registry.npmjs.org/@mdi/font/-/font-6.1.95.tgz"
+  "version" "6.1.95"
 
-"@mdi/svg@^5.0.45":
-  version "5.9.55"
-  resolved "https://registry.npmjs.org/@mdi/svg/-/svg-5.9.55.tgz"
-  integrity sha512-gO0ZpKIeCn9vFg46QduK9MM+n1fuCNwSdcdlBTtbafnnuvwLveK2uj+byhdLtg/8VJGXDhp+DJ35QUMbeWeULA==
+"@mdi/svg@^6.1.95":
+  "integrity" "sha512-X3qD1LWJotRUMnkjuAdAJxb1fqRsa+uWh3UugEM2b66mj7NSC6jhn97W8b/UW/ukhDvdP/jRPrqz+2mJf2jN9w=="
+  "resolved" "https://registry.npmjs.org/@mdi/svg/-/svg-6.1.95.tgz"
+  "version" "6.1.95"
 
-"@mdi/util@^0.3.0":
-  version "0.3.2"
-  resolved "https://registry.npmjs.org/@mdi/util/-/util-0.3.2.tgz"
-  integrity sha512-0ICbKIcsI+OYSqz6SWsYVJA6+kM+irQQiwYGBtJlq0a0sI0JrB2bCrc4S/xVfexqwa1EG8dlSY/ohsQllEXnyQ==
+"@mdi/util@^0.3.2":
+  "version" "0.3.2"

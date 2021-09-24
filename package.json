@@ -9,8 +9,8 @@
     "build": "node index.js"
   },
   "dependencies": {
-    "@mdi/util": "^0.3.0",
-    "@mdi/svg": "^5.9.55",
-    "@mdi/font": "^5.9.55"
+    "@mdi/util": "^0.3.2",
+    "@mdi/svg": "^6.1.95",
+    "@mdi/font": "^6.1.95"
   }
 }

@@ -1,4 +1,4 @@
-// Material Design Icons v5.9.55
+// Material Design Icons v6.1.95
 
 library mdi;
 
